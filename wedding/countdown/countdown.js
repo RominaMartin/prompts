@@ -76,7 +76,7 @@ const WEDDING_ANNIVERSARIES = {
   if (today > WEDDING_DATE) {
     document.getElementById("countdown").style.display = "none";
     document.getElementById("content").style.display = "block";
-    let value = "Vaya guachafita love, papeles arreglados! ♥️";
+    let value = `¡Papeles arreglados! ♥️`;
 
     if (anniversaryNumber > 0) {
       let anniversaryMatching = WEDDING_ANNIVERSARIES[anniversaryNumber];
@@ -84,7 +84,7 @@ const WEDDING_ANNIVERSARIES = {
         const diff = anniversaryNumber - (anniversaryNumber % 5);
         anniversaryMatching = WEDDING_ANNIVERSARIES[diff];
       }
-      value = `Y ya este es el ${anniversaryNumber}º aniversario darling ♥️ → Este año toca: ${anniversaryMatching}`;
+      value = `Ya va el ${anniversaryNumber}º aniversario darling ♥️!\nY es el año de: ${anniversaryMatching}`;
     }
     document.getElementById("anniversary").innerText = value;
 
