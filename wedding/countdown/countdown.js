@@ -78,7 +78,7 @@ const WEDDING_ANNIVERSARIES = {
     document.getElementById("content").style.display = "block";
     let value = `¡Papeles arreglados! ♥️`;
 
-    if (anniversaryNumber > 0) {
+    if (today.getMonth() >= WEDDING_DATE.getMonth() && anniversaryNumber > 0) {
       let anniversaryMatching = WEDDING_ANNIVERSARIES[anniversaryNumber];
       if (!anniversaryMatching && anniversaryNumber > 50) {
         const diff = anniversaryNumber - (anniversaryNumber % 5);
